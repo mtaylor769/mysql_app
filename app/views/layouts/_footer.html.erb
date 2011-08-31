@@ -1,0 +1,45 @@
+<footer id="footer">
+  <nav class="navigation round">
+    <ul>
+      <li><%= link_to "Home", root_path %></li>
+      <li><%= link_to "About", about_path %></li>
+      <li><%= link_to "Contact", contact_path %></li>
+      <li><%= copyright %></li>
+    </ul>
+  </nav>
+  <p>Powered by <%= image_tag("rails.png", :alt => "Powered by Rails") %> <span>Hosted by <%= image_tag("heroku_logo.png", :alt => "Hosted by Heroku") %></span></p>
+  
+
+</footer>
+<!--[if lt IE 7 ]>
+  <script src="js/libs/dd_belatedpng.js"></script>
+  <script>DD_belatedPNG.fix('img, .png_bg'); // Fix any <img> or .png_bg bg-images. Also, please read goo.gl/mZiyb </script>
+<![endif]-->
+
+<!-- mathiasbynens.be/notes/async-analytics-snippet Change UA-XXXXX-X to be your site's ID -->
+<script type="text/javascript">
+  // Custom jQuery calls here
+  $(document).ready(function() {
+    jQuery.noConflict();
+    //alert('ere');
+  });
+
+
+  // Google Analytics
+  var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+
+
+  // Aptana helper
+  if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)){
+    var apt = document.getElementById('aptana');
+    for (i=0;child=apt.children[i];i++) {
+      if (child.className == "line") {
+        child.style.top = "7px";
+      }
+    }
+  }
+
+</script>

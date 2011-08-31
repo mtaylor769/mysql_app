@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= title %></title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
-  <%= csrf_meta_tag %>
+    <title><%= title %></title>
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->    
+    <%= render 'layouts/htmlheader' %>
 </head>
 <body>
-
-<%= yield %>
-
+  <div id="container">
+    <%= render 'layouts/header' %>
+    <section id="mainContainer">
+      <%= yield %>
+    </section>
+    <%= render 'layouts/footer' %>
+  </div>
+  <%= debug(params) if Rails.env.development? %>
 </body>
 </html>
+
