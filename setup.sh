@@ -2,5 +2,5 @@
 
 bundle install
 rails g rspec:install
-bundle install --binstubs
 bundle exec spork --bootstrap
+bundle install --binstubs
