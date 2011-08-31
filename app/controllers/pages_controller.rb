@@ -1,10 +1,14 @@
 class PagesController < ApplicationController
+  def home
+    @title = "Home"
+  end
+
   def about
-    require 'mysql2'
-    db = Mysql2::Client.new
-    db.query("show databases").each do |row|
-      row
-    end
+    @title = "About Us"
+  end
+
+  def contact
+    @title = "Contact Us"
   end
 
 end
