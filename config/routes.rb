@@ -1,10 +1,11 @@
 MysqlApp::Application.routes.draw do
   resources :users
   match '/signup', :to => "users#new"
+  match '/edit', :to => "users#edit"
+  get "users/delete"
 
   root :to => 'pages#home'
   match "/about", :to => "pages#about"
-  match "/contact", :to => "pages#contact"
   match "/contact", :to => "pages#contact"
 
   # The priority is based upon order of creation:

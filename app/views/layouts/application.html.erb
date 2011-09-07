@@ -10,6 +10,12 @@
 <body>
   <div id="container">
     <%= render 'layouts/header' %>
+    <section id="flashbox" class="round">
+      <% flash.each do |key, value| %>
+        <div class="flash <%= key %>"><%= value %></div>
+      <% end %>
+      <%= yield %>
+    </section>
     <section id="mainContainer">
       <%= yield %>
     </section>
